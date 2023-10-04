@@ -29,10 +29,9 @@ let pokemonRepository = (function () {
         add: add
     }
 })();
-pokemonRepository.getAll();
-pokemonRepository.add(item);
 
-pokemonList.forEach(function(pokemon){
+
+pokemonRepository.getAll().forEach(function(pokemon){
     if (pokemon.height >100){
         document.write(pokemon.name + ':' + ' ' + 'height-' + ' ' + pokemon.height + 'cm' + '- Wow, that\'s big!<br>');
     }else {
