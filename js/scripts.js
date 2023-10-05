@@ -90,7 +90,7 @@ pokemonRepository.loadList().then(function() {
 
 /* Exercise 1.6 code
 let pokemonRepository = (function () {
-    let repository = [
+    let pokemonList = [
         {name: 'Squirtle', 
         height: 50, 
         types: ['Water'], 
@@ -129,13 +129,13 @@ let pokemonRepository = (function () {
     ];
 
     function getAll () {
-        return repository;
+        return pokemonList;
     }
     function add (pokemon) {
-        repository.push(pokemon);
+        pokemonList.push(pokemon);
     }
     function addListItem(pokemon){
-        let pokemonList = document.querySelector(".pokemon-list");
+        let list = document.querySelector(".pokemon-list");
         let listpokemon = document.createElemenet("li");
         let button = document.createElement("button");
         button.addEventListener('click', function(pokemon){
