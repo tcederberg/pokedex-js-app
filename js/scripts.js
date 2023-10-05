@@ -40,8 +40,8 @@ let pokemonRepository = (function () {
         }).then(function (json) {
             json.results.forEach(function (pokemon) {
                 let pokemon = {
-                    name: item.name,
-                    detailsUrl: item.url
+                    name: pokemon.name,
+                    detailsUrl: pokemon.url
                 };
                 add(pokemon);
                 console.log(pokemon);
