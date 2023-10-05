@@ -5,7 +5,7 @@ let pokemonRepository = (function () {
     function getAll () {
         return pokemonList;
     }
-    
+
     function add (pokemon) {
         if (
             typeof pokemon === "object" &&
@@ -19,7 +19,7 @@ let pokemonRepository = (function () {
     }
 
     function addListItem(pokemon){
-        let pokemonList = document.querySelector(".pokemon-list");
+        let list = document.querySelector(".pokemon-list");
         let listpokemon = document.createElemenet("li");
         let button = document.createElement("button");
         button.addEventListener('click', function(pokemon){
@@ -38,7 +38,7 @@ let pokemonRepository = (function () {
         return fetch(apiUrl).then(function (response) {
             return response.json();
         }).then(function (json) {
-            json.results.forEach(function (item) {
+            json.results.forEach(function (pokemon) {
                 let pokemon = {
                     name: item.name,
                     detailsUrl: item.url
@@ -51,22 +51,22 @@ let pokemonRepository = (function () {
         });
     }
 
-    function loadDetails(item) {
-        let url = item.detailsUrl;
+    function loadDetails(pokemon) {
+        let url = pokemon.detailsUrl;
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
-            item.imageUrl = details.sprites.front_default;
-            item.height = details.height;
-            item.types = details.types;
+            pokemon.imageUrl = details.sprites.front_default;
+            pokemon.height = details.height;
+            pokemon.types = details.types;
         }).catch(function (e) {
             console.error(e);
         });
     }
 
-    function showDetails(item) {
-        pokemonRepository.loadDetails(item).then(function () {
-        console.log(item);
+    function showDetails(pokemon) {
+        pokemonRepository.loadDetails(pokemon).then(function () {
+        console.log(pokemon);
         });
     }
 
