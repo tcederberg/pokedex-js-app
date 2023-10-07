@@ -1,4 +1,4 @@
-//Exercise 1.6 code
+/*Exercise 1.6 code
 //create an IIFE to encapsulate the code
 let pokemonRepository = (function () {
     let pokemonList = [
@@ -100,11 +100,11 @@ console.log(pokemonRepository.getAll());
     //use newly added addListItem insdie forEach()
 pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
-});
+});*/
 
 
     //Exercise 1.7 code still to be revised
-/*let pokemonRepository = (function () {
+let pokemonRepository = (function () {
     let pokemonList = [];
         //link API here
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
@@ -210,7 +210,7 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.getAll().forEach(function (pokemon) {
         pokemonRepository.addListItem(pokemon);
     }); //iterate through pokemon and call addListItem function
-});*/
+});
 
 
 
