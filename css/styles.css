@@ -75,14 +75,20 @@ h1 {
     text-decoration: underline;
   }
   
-  .modal h1 {
-    margin-top: 0;
-    font: 40px;
+  /* Style for modal content (e.g., text and images) */
+  .modal-title {
+    font-size: 24px;
+    margin-bottom: 0;
   }
   
-  .modal p {
-    margin-bottom: 0;
-    font: 24px;
+  .modal-body {
+    margin-top: 0;
+    font-size: 24px;
+  }
+    /* Responsive image style */
+  .modal img {
+    max-width: 100%;
+    height: auto;
   }
   #modal-container {
     display: none;
@@ -107,3 +113,5 @@ h1 {
     display: grid;
     text-align: center;
   }
+
+ 
