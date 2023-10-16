@@ -1,80 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pokemon Index</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="dist/styles.css" />
   </head>
   <body>
-        <!-- Main Title and List -->
-    <div> 
-        <h1><img src="images/pokemonlogo.small.png"> </h1>
-            
+    <!-- Main Title and List -->
+    <div>
+      <h1><img src="images/pokemonlogo.small.png" /></h1>
     </div>
 
-         <!-- NAVBAR -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#"><img src="images/pokemon-group.png"> </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html"><img src="images/pokeball-small.png"> <img src="images/hometext-small.png"> <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex"><img src="images/pokeball-small.png"><img src="images/what-is-a-pokedex-small.png"> </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Search Bar coming soon!</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><img src="images/pokemon-group.png"> </a>
-            </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="#"
+        ><img src="images/pokemon-group.png" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html"
+              ><img src="images/pokeball-small.png" />
+              <img src="images/hometext-small.png" />
+              <span class="sr-only"></span
+            ></a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://bulbapedia.bulbagarden.net/wiki/Pok%C3%A9dex"
+              ><img src="images/pokeball-small.png" /><img
+                src="images/what-is-a-pokedex-small.png"
+              />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Search Bar coming soon!</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><img src="images/pokemon-group.png" />
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
-
     <div class="list-group">
-        <header class="container">                
-            <ul style="list-style-type: none;" class="pokemon-list d-flex justify-content-center flex-wrap"></ul>
-        </header>
+      <header class="container">
+        <ul
+          style="list-style-type: none"
+          class="pokemon-list d-flex justify-content-center flex-wrap"
+        ></ul>
+      </header>
     </div>
 
-
-        <!-- Modal -->
-    <div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modal-title"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modal-container"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="modal-title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
         </div>
+      </div>
     </div>
     <script
-        src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-        crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="dist/scripts.js"></script>
   </body>
 </html>
