@@ -9,9 +9,9 @@ let pokemonRepository = (function() {
 
     function add(pokemon) {
         if (
-            typeof pokemon === "object" &&
-            "name" in pokemon &&
-            "detailsUrl" in pokemon
+            typeof pokemon === 'object' &&
+            'name' in pokemon &&
+            'detailsUrl' in pokemon
         ) {
             pokemonList.push(pokemon);
         } else {
@@ -31,8 +31,8 @@ let pokemonRepository = (function() {
         listItem.classList.add('list-group-item', 'row', 'bg-transparent', 'border-0');
         button.classList.add('btn','btn-primary','btn-lg','button-custom');
         button.innerText = pokemon.name;
-        button.setAttribute("data-target", "#modal-container"); 
-        button.setAttribute("data-toggle", "modal");
+        button.setAttribute('data-target', '#modal-container'); 
+        button.setAttribute('data-toggle', 'modal');
         listItem.appendChild(button);
         fullList.appendChild(listItem);
         button.addEventListener ('click', () => {
